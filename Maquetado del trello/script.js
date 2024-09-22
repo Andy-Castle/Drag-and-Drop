@@ -13,7 +13,12 @@ function onDrop(event) {
 
   const dropzone = event.target;
 
-  dropzone.appendChild(draggableElement);
+  if (dropzone.classList.contains("example-draggable")) {
+    const referenceElement = dropzone;
+    referenceElement.parentNode.insertBefore(draggableElement, referenceElement);
+  } else if (dropzone.classList.contains("dropzone")) {
+    dropzone.appendChild(draggableElement);
+  }
 
   event.dataTransfer.clearData();
 }
