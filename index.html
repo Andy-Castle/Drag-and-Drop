@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maquetado rapido de un trello</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="ListDraggable">
+          <h1>List</h1>
+          <div
+            class="dropzone"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)">
+            <div
+              id="draggable-1"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event)">
+              Thing
+            </div>
+            <div
+              id="draggable-2"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event)">
+              Limpiar la casa
+            </div>
+            <div
+              id="draggable-3"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event)">
+              Limpiar mi cuarto
+            </div>
+          </div>
+        </div>
+        <div class="ToDo-DropZone">
+          <h1>To Do</h1>
+          <div
+            class="dropzone"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"></div>
+        </div>
+        <div class="Did-DropZone">
+          <h1>Did</h1>
+          <div
+            class="dropzone"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"></div>
+        </div>
+        <div class="Done-DropZone">
+          <h1>Done</h1>
+          <div
+            class="dropzone"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
